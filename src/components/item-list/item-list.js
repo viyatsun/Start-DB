@@ -15,9 +15,11 @@ export default class ItemList extends Component {
 
   componentDidMount () {
     this.swapiService
-      .getAllStarships()
+      .getAllPeople()
       .then((peopleList)=>{
-        console.log(peopleList)
+        this.setState({
+          peopleList
+        })
       });    
   }
 
