@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
 
+import SwapiService from '../../services/swapi-service';
+//import Spinner from '../spinner';
+
 import './item-list.css';
 
 export default class ItemList extends Component {
 
+  swapiService = new SwapiService();
+
+  state = {
+    peopleList: null
+  }
+
+  componentDidMount () {
+    this.swapiService
+      .getAllStarships()
+      .then((peopleList)=>{
+        console.log(peopleList)
+      });    
+  }
+
   render() {
+
     return (
       <ul className="item-list list-group">
         <li className="list-group-item">
