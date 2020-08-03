@@ -54,7 +54,7 @@ export default class RandomPlanet extends Component {
        
     return (
       <div className="random-planet jumbotron rounded">
-        {hasData}
+        {errorMassage}
         {spinner}
         {content}
       </div>
