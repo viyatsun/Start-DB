@@ -1,12 +1,12 @@
 .person-details {
     display: flex;
-    margin-top: 1rem;
+  
     flex-direction: row;
     padding: 1rem;
   }
   
   .person-details .person-image {
-    width: 9%;
+    width: 37%;
     height: 10%;
     border-radius: 10px;
   }

@@ -1,19 +1,37 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import Header from '../header';
-import ItemList from '../item-list';
-import PersonDetails from '../person-deteils';
 import RandomPlanet from '../random-planet';
+import PeoplePage from '../people-page';
+import './app.css';
+import ErrorIndicator from '../error-indicator';
 
-const App = () => {
-    return (
-        <div>
+
+export default class App extends Component {
+    
+    state = {
+        hasError: false
+    }
+
+    componentDidCatch () {
+        this.setState({
+            hasError: true
+        })
+    }
+    
+    render (){
+
+        if (this.setState.hasError) {
+            return <ErrorIndicator/>
+        }
+
+        return(
+        <div className = 'aplication'>
             <Header/>
             <RandomPlanet/>
-            <ItemList/>
-            <PersonDetails/>
+            <PeoplePage/>
+            <PeoplePage/>
+            <PeoplePage/>
         </div>
-    )
+    )}
 };
-
-export default App; 
