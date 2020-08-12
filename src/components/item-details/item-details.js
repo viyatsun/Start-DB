@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import './person-details.css';
+import './item-details.css';
 import SwapiService from '../../services/swapi-service';
 
-export default class PersonDetails extends Component {
+export default class ItemDetails extends Component {
   
   swapiService = new SwapiService();  
 
   state = {
-    person:null
+    item:null
   }
 
   componentDidMount(){
@@ -29,20 +29,20 @@ export default class PersonDetails extends Component {
 
     this.swapiService
       .getPerson(personId)
-      .then((person)=>{
-        this.setState({person})
+      .then((item)=>{
+        this.setState({item})
       })
   }
 
   
   
   render() {
-    if(!this.state.person) {
-      return <span>Select a person from a list</span>;
+    if(!this.state.item) {
+      return <span>Select a item from a list</span>;
     }
 
     const {id, name, gender,
-              birthYear, eyeColor} = this.state.person;
+              birthYear, eyeColor} = this.state.item;
 
     return (
       <div className="person-details card">

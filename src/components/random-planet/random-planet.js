@@ -60,7 +60,6 @@ export default class RandomPlanet extends Component {
         {spinner}
         {content}
       </div>
-
     );
   }
 }

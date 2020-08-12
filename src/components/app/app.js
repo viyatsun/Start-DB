@@ -5,9 +5,9 @@ import RandomPlanet from '../random-planet';
 import PeoplePage from '../people-page';
 import './app.css';
 import ErrorIndicator from '../error-indicator';
-import ItemList from '../item-list';
-import PersonDetails from '../person-deteils';
 import SwapiService from '../../services/swapi-service';
+import ErrorBounry from '../error-boundry';
+import Row from '../row';
 
 
 export default class App extends Component {
