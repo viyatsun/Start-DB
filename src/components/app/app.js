@@ -7,8 +7,7 @@ import ErrorIndicator from '../error-indicator';
 import SwapiService from '../../services/swapi-service';
 import ErrorBounry from '../error-boundry';
 import Row from '../row';
-import ItemDetails from '../item-details';
-import Record from '../record';
+import ItemDetails, {Record} from '../item-details/item-details';
 
 
 export default class App extends Component {
